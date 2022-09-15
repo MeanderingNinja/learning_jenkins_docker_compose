@@ -1,11 +1,10 @@
-version: '3.2'
+version: '3'
 
 services:
-  metabase:
-    image: metabase/metabase
-    depends_on:
-      - db
-db:
-  image: postgres:11
-  volumes:
-    - type: bind
+  echo-server:
+    image: ealen/echo-server:latest
+    environment:
+      - ENABLE_ENVIRONMENT=false
+    ports: 
+      - 3000:80
+
