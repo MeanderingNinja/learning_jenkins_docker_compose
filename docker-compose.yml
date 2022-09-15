@@ -6,5 +6,5 @@ services:
     environment:
       - ENABLE_ENVIRONMENT=false
     ports: 
-      - 3000:80
+      - 3001:80
 
