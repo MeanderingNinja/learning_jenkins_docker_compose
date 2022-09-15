@@ -1,8 +1,16 @@
 pipeline{
-  agent none
+  agent any
   stages{
-    stage("compose"){
-      agent{}
+    stage("verify tooling"){
+      steps{
+      sh """
+        docker version
+        docker info
+        docker conmpose version
+        curl --version
+        jq --version
+       """
+      }
     }
   }
 }
