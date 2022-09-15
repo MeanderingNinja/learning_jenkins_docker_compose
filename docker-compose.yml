@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  metabase:
+    image: metabase/metabase
+    depends_on:
+      - db
+db:
+  image: postgres:11
+  volumes:
+    - type: bind
