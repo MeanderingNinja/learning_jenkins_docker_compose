@@ -9,7 +9,7 @@ pipeline{
         docker info
         docker compose version
         curl --version 
-        echo pwd()
+        echo pwd
        """
       }
     }
