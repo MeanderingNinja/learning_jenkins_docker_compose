@@ -7,9 +7,7 @@ pipeline{
         docker version
         docker info
         docker compose version
-        curl --version
-        mkdir -p hello/world
-        ls -la 
+        curl --version 
        """
       }
     }
@@ -18,10 +16,6 @@ pipeline{
         sh "docker system prune -a --volumes -f"
       }
     }
-    stage("Check who is using port 3001"){
-      steps{
-        sh "lsof -i tcp:3001"
-      }
     }
     stage("Start Container"){
       steps{
