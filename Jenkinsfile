@@ -20,7 +20,7 @@ pipeline{
     }
     stage("Check who is using port 3001"){
       steps{
-        sh "l"
+        sh "lsof -i tcp:3001"
       }
     }
     stage("Start Container"){
