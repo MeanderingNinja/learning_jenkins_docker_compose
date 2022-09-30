@@ -9,7 +9,7 @@ pipeline{
         docker info
         docker compose version
         curl --version 
-        mkdir -p /var/nfs/cat_watcher_output
+        pwd()
        """
       }
     }
