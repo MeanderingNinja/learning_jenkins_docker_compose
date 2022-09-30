@@ -18,6 +18,11 @@ pipeline{
         sh "docker system prune -a --volumes -f"
       }
     }
+    stage("Check who is using port 3001"){
+      steps{
+        sh "l"
+      }
+    }
     stage("Start Container"){
       steps{
         sh "docker compose up -d --no-color --wait"
